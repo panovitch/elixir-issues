@@ -18,6 +18,7 @@ defmodule Issues.GithubIssues do
       body |> Poison.decode!()
     }
   end
+
   def check_for_error(200), do: :ok
   def check_for_error(_), do: :error
 end
